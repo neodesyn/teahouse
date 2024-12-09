@@ -1,0 +1,15 @@
+// Importing Variables and Mixins
+@import 'variables';
+@import 'mixins';
+@import 'base';  //all the global styles
+
+// Importing  Global Components
+@import 'header'; 
+@import 'footer';
+@import 'components'; // all the styles in main page
+
+// Importing  Page-Specific Styles
+// @import 'contact';
+// @import 'blog';
+// @import 'about';
+

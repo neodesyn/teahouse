@@ -1,0 +1,9 @@
+// Mixin for clamp font sizes
+@mixin font-size($min, $preferred, $max) {
+    font-size: clamp($min, $preferred, $max);
+  }
+  @mixin responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block; // Ensures no extra space below the image
+  }

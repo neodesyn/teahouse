@@ -1,0 +1,521 @@
+@font-face {
+  font-family: "signikaregular";
+  src: url("../fonts/signika-regular-webfont.woff2") format("woff2"), url("../fonts/signika-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "signikasemibold";
+  src: url("../fonts/signika-semibold-webfont.woff2") format("woff2"), url("../fonts/signika-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "signikaregular", "sans-serif";
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  color: #ff4371;
+}
+
+h4 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+h5 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw, 1.75rem);
+}
+
+p {
+  font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+  line-height: 1.7;
+  color: #808285;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  img {
+    max-width: 50%;
+  }
+}
+
+a {
+  color: #ff4371;
+}
+a:hover {
+  color: #ff4371;
+}
+
+.section-bg img {
+  text-align: center;
+}
+
+/****************/
+.btn-primary {
+  background-color: #1b746d !important;
+  border-color: #1b746d !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background-color: rgb(118.30472103, 209.69527897, 202.6652360515) !important;
+  border-color: rgb(118.30472103, 209.69527897, 202.6652360515) !important;
+}
+.btn-primary a {
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(1.5rem, 1vw, 1.25rem);
+}
+
+.btn-outline-primary {
+  border-color: #1b746d !important;
+  color: #50c5bc !important;
+}
+.btn-outline-primary:hover {
+  background-color: #1b746d !important;
+  color: #fff !important;
+  border-color: #1b746d !important;
+}
+.btn-outline-primary a {
+  text-decoration: none;
+  color: #1b746d;
+  font-size: clamp(1.5rem, 1vw, 1.25rem);
+}
+
+.section-pd {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media only screen and (max-width: 992px) {
+  .section-pd {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.section-bg {
+  background-color: #f7f5f2;
+}
+
+header {
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header.scrolled {
+  background-color: #fff;
+}
+header.scrolled .navbar-brand, header.scrolled .nav-link, header.scrolled .nav-item:hover .nav-link {
+  color: #1b746d;
+}
+header .logo {
+  width: 250px;
+}
+header .logo .left-logo {
+  width: 60px;
+  float: left;
+  margin-right: 10px;
+}
+header .logo .right-logo {
+  width: auto;
+  float: left;
+  text-align: left;
+}
+
+.navbar-brand {
+  margin-right: 0;
+  color: #1b746d;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "signikaregular", "sans-serif";
+  text-align: left;
+}
+.navbar-brand:hover {
+  color: #1b746d;
+}
+.navbar-brand span {
+  font-size: 16px;
+  display: block;
+  font-weight: normal;
+  margin-top: -10px;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #1b746d;
+  font-weight: 600;
+}
+.nav-link:focus {
+  color: #ff4371;
+}
+.nav-link:hover {
+  color: #ff4371;
+}
+
+.navbar-nav .nav-item {
+  padding: 2px 10px;
+}
+.navbar-nav .dropdown-submenu {
+  position: relative;
+}
+.navbar-nav .dropdown-submenu:hover .dropdown-menu {
+  display: block; /* Show submenu on hover */
+}
+.navbar-nav .dropdown-submenu .dropdown-menu {
+  margin-top: 0px;
+  display: none;
+  width: 180px;
+  padding: 0px;
+  background-color: #fff;
+}
+.navbar-nav .dropdown-submenu .dropdown-menu li {
+  border-bottom: solid 1px #f1f1f1;
+  background-color: #fff;
+}
+.navbar-nav .dropdown-submenu .dropdown-menu li .sub {
+  width: 0%;
+  transition: ease 1s;
+}
+.navbar-nav .dropdown-submenu .dropdown-menu li:hover .sub {
+  width: 100%;
+  background: #1b746d;
+  color: #fff;
+}
+.navbar-nav .dropdown-submenu .dropdown-menu .dropdown-item {
+  color: #1b746d;
+  padding: 10px;
+}
+.navbar-nav .dropdown-submenu .dropdown-menu .dropdown-item:hover, .navbar-nav .dropdown-submenu .dropdown-menu .dropdown-item:active, .navbar-nav .dropdown-submenu .dropdown-menu .dropdown-item:focus {
+  background-color: #ff4371;
+  color: #fff;
+}
+.navbar-nav .dropdown-submenu2 {
+  position: relative;
+}
+.navbar-nav .dropdown-submenu2:hover .dropdown-menu2 {
+  display: block; /* Show submenu on hover */
+}
+.navbar-nav .dropdown-submenu2 .dropdown-menu2 {
+  display: none;
+  width: 180px;
+  padding: 0px;
+  background-color: #fff;
+  position: absolute;
+  left: 100%;
+  top: 0px;
+  list-style-type: none;
+}
+.navbar-nav .dropdown-submenu2 .dropdown-menu2 li {
+  border-bottom: solid 1px #f1f1f1;
+  background-color: #fff;
+}
+.navbar-nav .dropdown-submenu2 .dropdown-menu2 li .sub2 {
+  width: 0%;
+  transition: ease 1s;
+}
+.navbar-nav .dropdown-submenu2 .dropdown-menu2 li:hover .sub2 {
+  width: 100%;
+  background: #1b746d;
+  color: #fff;
+}
+.navbar-nav .dropdown-submenu2 .dropdown-menu2 .dropdown-item {
+  background-color: #fff;
+  color: #1b746d;
+}
+.navbar-nav .dropdown-submenu2:hover .sub-head .dropdown-toggle {
+  color: #333;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-toggler i {
+    font-size: 30px;
+    color: #1b746d;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-brand {
+    font-size: 24px;
+    padding: 0;
+    text-align: left;
+  }
+  .navbar-brand span {
+    font-size: 14px;
+  }
+  .nav-item:hover .nav-link {
+    color: #1b746d;
+  }
+  .navbar-nav .dropdown-submenu .dropdown-menu {
+    width: 100%;
+    transition: ease 5s;
+  }
+  .navbar-nav .dropdown-submenu2 .dropdown-menu2 {
+    width: 100%;
+    position: relative;
+    bottom: 100%;
+    left: 0;
+    transition: ease 1s;
+  }
+  .navbar-nav .dropdown-submenu2 .dropdown-menu2 li {
+    background-color: rgba(27, 116, 109, 0.1215686275);
+    padding: 10px;
+  }
+  .navbar-nav .dropdown-submenu2 .dropdown-menu2 li .dropdown-item {
+    padding: 0px;
+    display: contents;
+  }
+  .nav-item {
+    padding: 8px 15px;
+    text-align: left;
+  }
+  .nav-link {
+    font-size: 16px;
+    padding: 0;
+  }
+  header {
+    background-color: #fff;
+  }
+}
+.banner, .inner-banner {
+  background-image: url(../images/banner.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 180px;
+  text-align: center;
+}
+.banner p, .inner-banner p {
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  line-height: 32px;
+}
+
+.inner-banner {
+  background-image: url(../images/banner1.JPG);
+  padding: 100px 80px 50px;
+}
+.inner-banner header a {
+  color: #fff;
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1920px) {
+  .banner {
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .banner {
+    padding: 80px 20px;
+  }
+  .inner-banner {
+    padding: 90px 20px 0px;
+  }
+  .inner-banner header a {
+    color: #1b746d;
+  }
+}
+dl.left {
+  text-align: right;
+}
+@media only screen and (max-width: 768px) {
+  dl.left {
+    text-align: center;
+  }
+}
+dl.right {
+  text-align: left;
+}
+@media only screen and (max-width: 768px) {
+  dl.right {
+    text-align: center;
+  }
+}
+dl dt {
+  font-family: "signikaregular", "sans-serif";
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+}
+dl dd {
+  font-size: 18px;
+  color: #808285;
+  margin-bottom: 40px;
+}
+dl dd:last-child {
+  margin-bottom: 0px;
+}
+
+.product-container {
+  position: relative;
+  text-align: center;
+}
+.product-container .product-image-wrapper {
+  height: 320px;
+  overflow: hidden;
+}
+.product-container .product-image-wrapper:hover .product-image {
+  opacity: 0.5; /* Light opacity on hover */
+}
+.product-container .product-image-wrapper:hover .cart-btn {
+  display: block;
+}
+.product-container .cart-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  cursor: pointer;
+}
+.product-container .product-info {
+  margin-top: 10px;
+}
+.product-container .rating-stars {
+  font-size: 18px;
+  color: gold;
+}
+.product-container .star {
+  margin-right: 2px;
+}
+
+.icons-bg {
+  background-image: url(../images/juice.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icons-bg .mask {
+  background-color: rgba(27, 116, 109, 0.72);
+}
+.icons-bg .counter {
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  margin-top: 40px;
+  margin-bottom: 0;
+  line-height: 40px;
+  font-weight: 600;
+}
+.icons-bg p {
+  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+  color: #fff;
+}
+
+.testimonial-bg {
+  background-image: url(../images/testimonial-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.testimonial-bg .testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+}
+.testimonial-bg .carousel-indicators {
+  bottom: -60px;
+}
+.testimonial-bg .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #333;
+}
+.testimonial-bg .carousel-indicators button.active {
+  background-color: #50c5bc;
+}
+
+.contact-bg {
+  background-color: rgba(27, 116, 109, 0.04);
+  border-radius: 4px;
+  padding: 80px;
+  margin: 50px;
+  border: solid 1px #def0f3;
+}
+@media only screen and (max-width: 992px) {
+  .contact-bg {
+    text-align: left;
+    padding: 36px;
+    margin: 30px;
+  }
+}
+.contact-bg span {
+  margin-left: 55px;
+  display: block;
+}
+.contact-bg i {
+  color: #fff;
+}
+.contact-bg i:before {
+  width: 40px;
+  height: 40px;
+  background: #055160;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.contact-form .form-label {
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+.contact-form .form-label i {
+  color: #228f86;
+}
+.contact-form .form-control {
+  background-color: rgba(27, 116, 109, 0.04);
+  border: 1px solid #def0f3;
+  padding: 10px;
+}
+@media only screen and (max-width: 992px) {
+  .contact-form {
+    text-align: left;
+    margin: 30px;
+  }
+}
+
+footer p {
+  font-size: 13px;
+}
+footer p a {
+  color: #ff4371;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

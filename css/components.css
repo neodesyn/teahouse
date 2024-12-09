@@ -1,0 +1,17 @@
+/* Error: Undefined variable.
+ *    ,
+ * 26 | @media only screen and (max-width: $breakpoint-lg) {
+ *    |                                    ^^^^^^^^^^^^^^
+ *    '
+ *   scss\components.scss 26:36  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 26 \2502  @media only screen and (max-width: $breakpoint-lg) {\d\a    \2502                                     ^^^^^^^^^^^^^^\a    \2575 \a   scss\\components.scss 26:36  root stylesheet";
+}

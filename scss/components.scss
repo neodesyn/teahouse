@@ -1,0 +1,204 @@
+//Banner styles
+
+.banner, .inner-banner{
+    background-image: url(../images/banner.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 180px;
+    text-align: center;
+    p{
+        font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+        line-height: 32px;
+    }
+}
+.inner-banner{
+    background-image: url(../images/banner1.JPG);
+    padding: 100px 80px 50px;
+    header a{
+        color:#fff;
+    }   
+}
+@media only screen and (min-width: 1300px) and (max-width: 1920px) {
+    .banner {
+        height: 100vh;
+    }
+}
+@media only screen and (max-width: $breakpoint-lg) {
+    .banner {
+        padding: 80px 20px;
+    }
+    .inner-banner{
+        padding: 90px 20px 0px;
+        header {
+        a{
+            color:$third-color;
+        }}
+    }  
+}
+
+
+dl{
+    &.left{
+        text-align: right;
+        @media only screen and (max-width: $breakpoint-md) { text-align: center;}
+    }
+    &.right{
+        text-align: left;
+        @media only screen and (max-width: $breakpoint-md) { text-align: center;}
+    }
+    dt{
+        font-family: $heading-font;
+        font-weight: 600;
+        margin-bottom: 15px;
+        @include font-size(1.5rem, 1.5vw, 1.8rem); 
+    }
+    dd{
+        font-size: 18px;
+        color: #808285;
+        margin-bottom: 40px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+   
+}
+
+//What we offer product container
+.product-container {
+    position: relative;
+    text-align: center;
+    .product-image-wrapper{
+        height:320px;
+        overflow: hidden;
+    }
+    .product-image-wrapper:hover  {
+        .product-image{
+            opacity: 0.5; /* Light opacity on hover */
+        }
+        .cart-btn {
+            display: block;
+          }
+    }
+    .cart-btn {
+        position: absolute;
+        top:50%;
+         left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        cursor: pointer;
+      }
+      .product-info {
+        margin-top: 10px;
+      }
+      .rating-stars {
+        font-size: 18px;
+        color: gold;
+      }
+      .star {
+        margin-right: 2px;
+      }
+    
+  }
+//Icons Container
+.icons-bg{
+    background-image: url(../images/juice.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .mask{
+        background-color: rgb(27 116 109 / 72%);
+    }
+    .counter {
+        @include font-size(2.5rem, 3vw, 3rem);
+        margin-top: 40px;
+        margin-bottom: 0;
+        line-height: 40px;
+        font-weight: 600;
+      }
+ 
+    p{
+        @include font-size(1.5rem, 1.5vw, 1.8rem); 
+        color:$white-color;
+    }
+ }
+//Testimonials section
+ .testimonial-bg{
+    background-image: url(../images/testimonial-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .testimonial-text {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #555;
+      }
+      .carousel-indicators {
+        bottom: -60px;
+        button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #333;
+            &.active {
+                background-color: $primary-color;}
+       
+           }
+      }
+    }    
+//   .carousel-control-prev-icon,
+//   .carousel-control-next-icon {
+//     background-color: #333;
+//     border-radius: 50%;
+//     padding: 10px;
+//   }
+//contact section
+.contact-bg{
+    background-color: rgb(27 116 109 / 4%);
+    border-radius: 4px;
+    padding: 80px;
+    margin: 50px;
+    border: solid 1px #def0f3;
+    @media only screen and (max-width: $breakpoint-lg) { text-align: left;padding: 36px; margin: 30px;}
+    span{
+        margin-left:55px;
+        display: block;
+    }
+    i{
+        color: #fff;
+            &:before{
+            width: 40px;
+            height: 40px;
+            background: #055160;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 100%;
+        }
+    }
+}
+.contact-form{
+    .form-label {
+        margin-bottom: .5rem;
+        font-size: 18px;
+        margin-top: 10px;
+        color: #333;
+        i{
+            color:#228f86;
+        }
+    }
+    .form-control {
+        background-color: rgba(27, 116, 109, 0.04);
+        border: 1px solid #def0f3;
+        padding: 10px;
+    }
+    @media only screen and (max-width: $breakpoint-lg) {text-align: left; margin: 30px;}
+}
+
+
+//Footer Section
+footer p{
+    font-size: 13px;
+    a{
+        color: $accent-color;
+        text-decoration: none;
+    }
+}
+

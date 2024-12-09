@@ -1,0 +1,195 @@
+header {
+  width: 100%;
+  background-color: transparent; // Initially transparent
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+ 
+  &.scrolled {
+    background-color: #fff; // Change to white when scrolled
+    .navbar-brand, .nav-link, .nav-item:hover .nav-link{
+      color:$third-color;
+    }
+    
+  }
+  .logo {
+    width: 250px;
+    .left-logo {
+      width: 60px;
+      float: left;
+      margin-right: 10px;
+    }
+    .right-logo {
+      width: auto;
+      float: left;
+      text-align: left;
+  }
+  }
+}
+.navbar-brand {
+  margin-right: 0;
+  color: $third-color;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: $heading-font;
+  text-align: left;
+  &:hover{color: $third-color;}
+  span{
+    font-size:16px;
+    display: block;
+    font-weight: normal;
+    margin-top: -10px;
+  }
+}
+.nav-link {
+  font-size: 18px;
+  color: $third-color;
+  font-weight: 600;
+  &:focus {
+    color: $accent-color;
+  }
+  &:hover {
+    color: $accent-color;
+  }
+}
+.navbar-nav{
+  .nav-item {
+    padding: 2px 10px;
+  }
+   .dropdown-submenu{
+    position: relative;
+    &:hover .dropdown-menu{
+      display: block;/* Show submenu on hover */
+    }
+    .dropdown-menu{
+      margin-top: 0px;
+      display: none;
+      width: 180px;
+      padding: 0px;
+      background-color: #fff;
+      li{
+        border-bottom: solid 1px #f1f1f1;
+        background-color: #fff;
+        .sub{
+          width:0%;
+          transition: ease 1s;
+          } 
+          &:hover .sub{
+            width:100%;
+            background: $third-color;
+            color:#fff;
+            }
+      } 
+      .dropdown-item{
+        color:$third-color;
+        padding:10px;
+        &:hover, &:active, &:focus{
+          background-color: $accent-color; color:#fff
+          }
+        }
+      }
+     
+      
+  }
+  .dropdown-submenu2 {
+    position: relative;
+    &:hover .dropdown-menu2{
+      display: block;/* Show submenu on hover */
+    }
+    .dropdown-menu2 {
+      display: none;
+      width: 180px;
+      padding: 0px;
+      background-color: #fff;
+      position: absolute;
+      left: 100%;
+      top: 0px;
+      list-style-type: none;
+        li{
+          border-bottom: solid 1px #f1f1f1;
+          background-color: #fff; 
+          .sub2{
+            width:0%;
+            transition: ease 1s;
+            }
+            &:hover .sub2{
+              width:100%;
+              background: $third-color;
+              color:#fff;
+              }
+        }
+        .dropdown-item{
+          background-color: #fff;
+          color:$third-color;
+          }
+      }
+      &:hover .sub-head .dropdown-toggle{
+        color:#333;
+        }  
+  
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-toggler {
+    i{
+      font-size: 30px;
+      color: $third-color;
+    }
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  .navbar-brand {
+    font-size: 24px;
+    padding:  0;
+    text-align: left;
+    span{
+      font-size: 14px;
+    }
+  }
+  .nav-item:hover .nav-link {
+    color: $third-color;
+}
+.navbar-nav{
+  .dropdown-submenu{
+    .dropdown-menu{
+      width: 100%;
+      transition: ease 5s;
+    }
+  }
+  .dropdown-submenu2{
+    .dropdown-menu2{
+      width: 100%;
+      position: relative;
+      bottom: 100%;
+      left:0;
+      transition: ease 1s;
+      li{
+        background-color: #1b746d1f;
+        padding: 10px;
+        .dropdown-item{
+          padding:0px;
+          display: contents;
+        }
+      }
+    }
+  }
+
+ 
+}
+ .nav-item {
+    padding: 8px 15px;
+    text-align: left;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 0;
+  }
+  header{
+    background-color: #fff;
+  }
+}

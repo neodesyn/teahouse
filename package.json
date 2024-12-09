@@ -1,0 +1,14 @@
+{
+  "name": "teahouse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "build:sass": "sass scss/styles.scss css/styles.css",
+  "watch:sass": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
