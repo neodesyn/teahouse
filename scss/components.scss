@@ -9,34 +9,27 @@
     p{
         font-size: clamp(1.2rem, 1.6vw, 1.5rem);
         line-height: 32px;
+        @media only screen and (max-width: $breakpoint-sm) {line-height: 23px;}
     }
 }
 .inner-banner{
     background-image: url(../images/banner1.JPG);
     padding: 100px 80px 50px;
-    header a{
+    @media only screen and (max-width: $breakpoint-lg) {padding: 90px 20px 0px; }
+    @media only screen and (max-width: $breakpoint-sm) {padding: 100px 20px 20px;} 
+    
+     header a{
         color:#fff;
+        @media only screen and (max-width: $breakpoint-lg) {
+            color:$third-color;}
+   
     }   
 }
-@media only screen and (min-width: 1300px) and (max-width: 1920px) {
-    .banner {
-        height: 100vh;
-    }
+.banner {
+    @media only screen and (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl) { height: 100vh;}
+    @media only screen and (max-width: $breakpoint-lg) {padding: 80px 20px;}    
+    @media only screen and (max-width: $breakpoint-sm) {padding: 100px 20px 10px;} 
 }
-@media only screen and (max-width: $breakpoint-lg) {
-    .banner {
-        padding: 80px 20px;
-    }
-    .inner-banner{
-        padding: 90px 20px 0px;
-        header {
-        a{
-            color:$third-color;
-        }}
-    }  
-}
-
-
 dl{
     &.left{
         text-align: right;
@@ -51,12 +44,14 @@ dl{
         font-weight: 600;
         margin-bottom: 15px;
         @include font-size(1.5rem, 1.5vw, 1.8rem); 
+        @media only screen and (max-width: $breakpoint-sm) {margin-bottom: 0px;}
     }
     dd{
         font-size: 18px;
         color: #808285;
         margin-bottom: 40px;
-        &:last-child{
+        @media only screen and (max-width: $breakpoint-sm) {font-size: 17px; margin-bottom: 10px;}
+         &:last-child{
             margin-bottom: 0px;
         }
     }
@@ -70,6 +65,10 @@ dl{
     .product-image-wrapper{
         height:320px;
         overflow: hidden;
+        @media only screen and (max-width: $breakpoint-sm){ max-height: 250px;height: auto;}
+        img{
+            @media only screen and (max-width: $breakpoint-sm){ width:55%;}  
+        }
     }
     .product-image-wrapper:hover  {
         .product-image{
@@ -89,6 +88,9 @@ dl{
       }
       .product-info {
         margin-top: 10px;
+        .product-title{
+            @media only screen and (max-width: $breakpoint-sm){margin-bottom: 0px;}
+        }
       }
       .rating-stars {
         font-size: 18px;
@@ -107,6 +109,9 @@ dl{
     background-size: cover;
     .mask{
         background-color: rgb(27 116 109 / 72%);
+        img{
+            @media only screen and (max-width: $breakpoint-sm){max-width: 40%;}  
+        }
     }
     .counter {
         @include font-size(2.5rem, 3vw, 3rem);
@@ -114,11 +119,14 @@ dl{
         margin-bottom: 0;
         line-height: 40px;
         font-weight: 600;
+        @media only screen and (max-width: $breakpoint-sm){ font-size: clamp(1.5rem, 2vw, 1.8rem);margin-top: 10px;     line-height: 23px; } 
       }
  
     p{
         @include font-size(1.5rem, 1.5vw, 1.8rem); 
         color:$white-color;
+        @media only screen and (max-width: $breakpoint-sm){ font-size: clamp(1.2rem, 1.5vw, 1.8rem); margin-bottom:30px;}
+       
     }
  }
 //Testimonials section
@@ -126,6 +134,11 @@ dl{
     background-image: url(../images/testimonial-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (max-width: $breakpoint-sm){
+        background-size: inherit;
+        background-position: left;
+        }    
+
     .testimonial-text {
         font-size: 1.2rem;
         font-style: italic;
@@ -158,16 +171,17 @@ dl{
     margin: 50px;
     border: solid 1px #def0f3;
     @media only screen and (max-width: $breakpoint-lg) { text-align: left;padding: 36px; margin: 30px;}
+    @media only screen and (max-width: $breakpoint-sm) {padding: 20px; margin-top:0px;}
     span{
         margin-left:55px;
         display: block;
     }
     i{
-        color: #fff;
+        color: $accent-color;
             &:before{
             width: 40px;
             height: 40px;
-            background: #055160;
+            // background: #055160;
             line-height: 40px;
             text-align: center;
             border-radius: 100%;
@@ -180,6 +194,7 @@ dl{
         font-size: 18px;
         margin-top: 10px;
         color: #333;
+        @media only screen and (max-width: $breakpoint-sm){margin-bottom: 3px;font-size: 16px;  margin-top: 2px;}
         i{
             color:#228f86;
         }
@@ -188,8 +203,10 @@ dl{
         background-color: rgba(27, 116, 109, 0.04);
         border: 1px solid #def0f3;
         padding: 10px;
+        @media only screen and (max-width: $breakpoint-sm){    padding: 6px 10px;}
     }
     @media only screen and (max-width: $breakpoint-lg) {text-align: left; margin: 30px;}
+    @media only screen and (max-width: $breakpoint-sm) {margin-top: 15px;}
 }
 
 
